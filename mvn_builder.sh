@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Maven Builder Adoptium Temurin OpenJDK8"
 
-export MAVEN_ARGS="-e -B -DskipTests -Djava.net.preferIPv4Stack=true -Dmaven.repo.local=/opt/maven/.m2 -s /configuration/settings.xml --log-file=/workspace/source/build.log"
+export MAVEN_ARGS="-e -B -DskipTests -Djava.net.preferIPv4Stack=true -Dmaven.repo.local=/opt/maven/.m2 -s configuration/settings.xml --log-file=/workspace/source/build.log"
 if [ ! -z "$MVN_ARGS" ]
 then	
 	export MAVEN_ARGS="$MAVEN_ARGS $MVN_ARGS"
